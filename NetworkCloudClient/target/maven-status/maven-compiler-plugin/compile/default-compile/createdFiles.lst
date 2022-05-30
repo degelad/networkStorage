@@ -1,0 +1,4 @@
+module-info.class
+org/clades/networkcloudclient/PrimaryController.class
+org/clades/networkcloudclient/App.class
+org/clades/networkcloudclient/SecondaryController.class
