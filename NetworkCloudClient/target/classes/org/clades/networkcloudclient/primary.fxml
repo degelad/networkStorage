@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.clades.networkcloudclient.PrimaryController">
-   <children>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
+<VBox alignment="CENTER" spacing="0.1" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.clades.networkcloudclient.Controller">
+
+    <HBox fx:id="upperPanel">
+        <TextField fx:id = "loginfield" HBox.hgrow = "ALWAYS" promptText = "Логин"/>
+        <PasswordField fx:id="passwordField" promptText="Пароль" onAction="#tryToAuth"/>
+        <Button text = "Авторизоваться" onAction="#tryToAuth"/>
+    </HBox>
+    <HBox fx:id="upperPanelReg">
+        <TextField fx:id = "loginfieldreg" HBox.hgrow = "ALWAYS" promptText = "Логин"/>
+        <TextField fx:id = "nicknamefieldreg" HBox.hgrow = "ALWAYS" promptText = "Имя в чате"/>
+        <PasswordField fx:id="passwordFieldreg" promptText="Пароль" onAction="#tryToReg"/>
+        <Button text = "Зарегестрироваться" onAction="#tryToReg"/>
+    </HBox>
+    
+    <!--Расстягиваем вертикально еще один блок-->
+    <!--Внутри него еще блок и расстягиваем горизонтально-->
+    <HBox VBox.vgrow="ALWAYS">
+        <VBox HBox.hgrow="ALWAYS">
+    <TextArea fx:id = "chatArea" editable = "false" VBox.vgrow = "ALWAYS" />
+    <HBox fx:id="bottomPanel" managed="false" visible="false" >
+        <TextField fx:id = "msgField" HBox.hgrow = "ALWAYS" onAction="#sendMsg" promptText = "Введите сообщение..."/>
+        <Button fx:id="btn1" onAction="#sendMsg" text = "Отправить"/>
+    </HBox>
+        </VBox>
+<!--Справа помещаем список пользователей чата-->
+    <ListView fx:id="clientList" managed="false" visible="false">
+    </ListView>    
+    </HBox>
+    
 </VBox>
