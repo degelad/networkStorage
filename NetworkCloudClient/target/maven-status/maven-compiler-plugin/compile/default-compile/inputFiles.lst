@@ -1,4 +1,3 @@
-/media/degelad/disk_D/development/NetBeansProjects/NetworkCloud/NetworkCloudClient/src/main/java/org/clades/networkcloudclient/App.java
-/media/degelad/disk_D/development/NetBeansProjects/NetworkCloud/NetworkCloudClient/src/main/java/module-info.java
-/media/degelad/disk_D/development/NetBeansProjects/NetworkCloud/NetworkCloudClient/src/main/java/org/clades/networkcloudclient/SecondaryController.java
-/media/degelad/disk_D/development/NetBeansProjects/NetworkCloud/NetworkCloudClient/src/main/java/org/clades/networkcloudclient/PrimaryController.java
+/media/degelad/disk_D/development/NetBeansProjects/networkStorage/NetworkCloudClient/src/main/java/org/clades/networkcloudclient/History.java
+/media/degelad/disk_D/development/NetBeansProjects/networkStorage/NetworkCloudClient/src/main/java/org/clades/networkcloudclient/App.java
+/media/degelad/disk_D/development/NetBeansProjects/networkStorage/NetworkCloudClient/src/main/java/org/clades/networkcloudclient/Controller.java

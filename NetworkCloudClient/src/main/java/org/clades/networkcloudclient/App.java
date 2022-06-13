@@ -1,5 +1,6 @@
 package org.clades.networkcloudclient;
 
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,8 +18,11 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(loadFXML("primary"), 380, 340);
+        stage.setTitle("Lan chat");
         stage.setScene(scene);
+        scene.getStylesheets().add(getClass().getResource("/css/Styles.css").toExternalForm());
+
         stage.show();
     }
 
