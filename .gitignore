@@ -30,6 +30,7 @@ target/
 *.iws
 *.ipr
 .idea/
+target/
 
 # eclipse project file
 .settings/
@@ -44,6 +45,7 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+target/
 
 
 # OS
